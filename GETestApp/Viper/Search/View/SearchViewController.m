@@ -7,14 +7,19 @@
 //
 
 #import "SearchViewController.h"
+#import "SearchResultsTableViewDataSource.h"
+#import "MBProgressHUD.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *trainButton;
 @property (weak, nonatomic) IBOutlet UIButton *busButton;
 @property (weak, nonatomic) IBOutlet UIButton *flightButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *underlineViewLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *underlineViewWidthConstraint;
+
+@property (nonatomic) SearchResultsTableViewDataSource *dataSource;
 @end
 
 @implementation SearchViewController
@@ -23,12 +28,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataSource = [[SearchResultsTableViewDataSource alloc] initWithTableView:self.tableView];
     [self.presenter viewDidLoadEvent];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.presenter viewDidAppearEvent];
+}
+
+#pragma mark - Orientation Change
+
+//Using deprecated to be compatible with iOS 7 and 8
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self.presenter orientationChangeEvent];
 }
 
 #pragma mark - Actions
@@ -45,7 +58,24 @@
     }
 }
 
-#pragma mark - Animation
+#pragma mark - Protocol
+
+- (void)showProgressIndicator {
+    [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+    hud.label.text = @"Loading...";
+    [hud showAnimated:YES];
+    
+}
+
+- (void)hideProgressIndicator {
+    [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+}
+
+- (void)updateSearchResults:(NSArray<SearchResult *> *)results {
+    [self.dataSource setResults:results];
+}
 
 - (void)updateLayoutForSelectedOption:(SelectedOption)selectedOption animated:(BOOL)animated {
     UIButton *selectedButton;

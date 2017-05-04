@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="busButton" destination="ADb-SJ-vR5" id="ANS-HO-25w"/>
                 <outlet property="flightButton" destination="lcf-3S-hFd" id="lha-A9-Yw5"/>
+                <outlet property="tableView" destination="uNA-bN-jc4" id="sJ2-eD-K3s"/>
                 <outlet property="trainButton" destination="IAD-yV-lpH" id="b9N-5s-RXt"/>
                 <outlet property="underlineViewLeadingConstraint" destination="qCs-pg-cP3" id="XTU-Am-pea"/>
                 <outlet property="underlineViewWidthConstraint" destination="Wm3-oA-imB" id="EnR-bR-0TT"/>
@@ -96,7 +97,7 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNA-bN-jc4">
                     <rect key="frame" x="0.0" y="100" width="320" height="454"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

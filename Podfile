@@ -7,7 +7,8 @@ target 'GETestApp' do
 
   # Pods for GETestApp
 	pod 'Mantle', '~> 2.0'
-    	pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'SDWebImage', '~>3.8'
 
   target 'GETestAppTests' do
     inherit! :search_paths

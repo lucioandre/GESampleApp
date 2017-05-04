@@ -18,6 +18,10 @@
 		33386BA61EB95A3A0035A70F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386B9F1EB95A3A0035A70F /* SearchViewController.m */; };
 		33386BA71EB95A3A0035A70F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33386BA01EB95A3A0035A70F /* SearchViewController.xib */; };
 		33386BA81EB95A3A0035A70F /* SearchWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BA31EB95A3A0035A70F /* SearchWireframe.m */; };
+		33386BB11EBAB2080035A70F /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BB01EBAB2080035A70F /* SearchResultTableViewCell.m */; };
+		33386BB31EBAB22A0035A70F /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33386BB21EBAB22A0035A70F /* SearchResultTableViewCell.xib */; };
+		33386BB61EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BB51EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m */; };
+		33386BBA1EBACCB50035A70F /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BB91EBACCB50035A70F /* SearchResult.m */; };
 		99886EFB6A2F2327057F08AF /* libPods-GETestAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A82687C8814709313EDAD2 /* libPods-GETestAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,13 @@
 		33386BA01EB95A3A0035A70F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		33386BA21EB95A3A0035A70F /* SearchWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchWireframe.h; sourceTree = "<group>"; };
 		33386BA31EB95A3A0035A70F /* SearchWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchWireframe.m; sourceTree = "<group>"; };
+		33386BAF1EBAB2080035A70F /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
+		33386BB01EBAB2080035A70F /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		33386BB21EBAB22A0035A70F /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		33386BB41EBAB6EC0035A70F /* SearchResultsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewDataSource.h; sourceTree = "<group>"; };
+		33386BB51EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewDataSource.m; sourceTree = "<group>"; };
+		33386BB81EBACCB50035A70F /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResult.h; path = Entity/SearchResult.h; sourceTree = "<group>"; };
+		33386BB91EBACCB50035A70F /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResult.m; path = Entity/SearchResult.m; sourceTree = "<group>"; };
 		4EADCE6D7FC120A6BB5683DE /* Pods-GETestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GETestAppTests/Pods-GETestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D40EBF493723B6C4174D478 /* Pods-GETestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GETestApp/Pods-GETestApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB1E35545C386CF27DB6C90B /* Pods-GETestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GETestAppTests/Pods-GETestAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +161,7 @@
 		33386B941EB95A3A0035A70F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				33386BB71EBACC860035A70F /* Entities */,
 				33386B951EB95A3A0035A70F /* Interactor */,
 				33386B981EB95A3A0035A70F /* Presenter */,
 				33386B9B1EB95A3A0035A70F /* Protocols */,
@@ -189,6 +201,8 @@
 		33386B9D1EB95A3A0035A70F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33386BAE1EBAB19A0035A70F /* SearchResultsTableViewDataSource */,
+				33386BAD1EBAB15F0035A70F /* SearchResultCell */,
 				33386B9E1EB95A3A0035A70F /* SearchViewController.h */,
 				33386B9F1EB95A3A0035A70F /* SearchViewController.m */,
 				33386BA01EB95A3A0035A70F /* SearchViewController.xib */,
@@ -203,6 +217,34 @@
 				33386BA31EB95A3A0035A70F /* SearchWireframe.m */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		33386BAD1EBAB15F0035A70F /* SearchResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				33386BAF1EBAB2080035A70F /* SearchResultTableViewCell.h */,
+				33386BB01EBAB2080035A70F /* SearchResultTableViewCell.m */,
+				33386BB21EBAB22A0035A70F /* SearchResultTableViewCell.xib */,
+			);
+			name = SearchResultCell;
+			sourceTree = "<group>";
+		};
+		33386BAE1EBAB19A0035A70F /* SearchResultsTableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				33386BB41EBAB6EC0035A70F /* SearchResultsTableViewDataSource.h */,
+				33386BB51EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m */,
+			);
+			name = SearchResultsTableViewDataSource;
+			sourceTree = "<group>";
+		};
+		33386BB71EBACC860035A70F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				33386BB81EBACCB50035A70F /* SearchResult.h */,
+				33386BB91EBACCB50035A70F /* SearchResult.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		9B298E1E77EEDD06E0451515 /* Pods */ = {
@@ -315,6 +357,7 @@
 			files = (
 				33386B791EB955800035A70F /* LaunchScreen.storyboard in Resources */,
 				33386B761EB955800035A70F /* Assets.xcassets in Resources */,
+				33386BB31EBAB22A0035A70F /* SearchResultTableViewCell.xib in Resources */,
 				33386BA71EB95A3A0035A70F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,12 +469,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33386BBA1EBACCB50035A70F /* SearchResult.m in Sources */,
 				33386BA51EB95A3A0035A70F /* SearchPresenter.m in Sources */,
 				33386B6E1EB955800035A70F /* AppDelegate.m in Sources */,
 				33386BA41EB95A3A0035A70F /* SearchInteractor.m in Sources */,
 				33386BA81EB95A3A0035A70F /* SearchWireframe.m in Sources */,
 				33386BA61EB95A3A0035A70F /* SearchViewController.m in Sources */,
 				33386B6B1EB955800035A70F /* main.m in Sources */,
+				33386BB11EBAB2080035A70F /* SearchResultTableViewCell.m in Sources */,
+				33386BB61EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
