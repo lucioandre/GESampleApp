@@ -28,6 +28,7 @@
         _departureTime = departureTime;
         _arrivalTime = arrivalTime;
         _numberOfStops = numberOfStops;
+        _departureDate = [[self dateFormatter] dateFromString:departureTime];
     }
     return self;
 }

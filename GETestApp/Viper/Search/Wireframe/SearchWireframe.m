@@ -10,6 +10,7 @@
 #import "SearchViewController.h"
 #import "SearchInteractor.h"
 #import "SearchPresenter.h"
+#import "SearchAPIClient.h"
 
 @implementation SearchWireframe
  
@@ -27,7 +28,7 @@
 + (UIViewController *)setupViewController {
     SearchPresenter *presenter = [SearchPresenter new];
     SearchWireframe *wireframe = [SearchWireframe new];
-    SearchInteractor *interactor = [SearchInteractor new];
+    SearchInteractor *interactor = [[SearchInteractor alloc] initWithSearchResultsProvider:[SearchAPIClient new]];
     
     SearchViewController *viewController = [[SearchViewController alloc] initWithNibName:NSStringFromClass(SearchViewController.class) bundle:nil];
     viewController.presenter = presenter;

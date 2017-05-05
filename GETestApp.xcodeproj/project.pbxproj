@@ -22,6 +22,9 @@
 		33386BB31EBAB22A0035A70F /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33386BB21EBAB22A0035A70F /* SearchResultTableViewCell.xib */; };
 		33386BB61EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BB51EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m */; };
 		33386BBA1EBACCB50035A70F /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BB91EBACCB50035A70F /* SearchResult.m */; };
+		33386BC31EBC2A6B0035A70F /* APIMappingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BC21EBC2A6B0035A70F /* APIMappingModel.m */; };
+		33386BC61EBC329A0035A70F /* SearchAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BC51EBC329A0035A70F /* SearchAPIClient.m */; };
+		33386BCA1EBC3BDA0035A70F /* SearchResultExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 33386BC91EBC3BDA0035A70F /* SearchResultExtractor.m */; };
 		99886EFB6A2F2327057F08AF /* libPods-GETestAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A82687C8814709313EDAD2 /* libPods-GETestAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,13 @@
 		33386BB51EBAB6EC0035A70F /* SearchResultsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewDataSource.m; sourceTree = "<group>"; };
 		33386BB81EBACCB50035A70F /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResult.h; path = Entity/SearchResult.h; sourceTree = "<group>"; };
 		33386BB91EBACCB50035A70F /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResult.m; path = Entity/SearchResult.m; sourceTree = "<group>"; };
+		33386BBF1EBC27FB0035A70F /* APIClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APIClientProtocol.h; path = APIClient/APIClientProtocol.h; sourceTree = "<group>"; };
+		33386BC11EBC2A6B0035A70F /* APIMappingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIMappingModel.h; path = APIClient/APIMappingModel.h; sourceTree = "<group>"; };
+		33386BC21EBC2A6B0035A70F /* APIMappingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIMappingModel.m; path = APIClient/APIMappingModel.m; sourceTree = "<group>"; };
+		33386BC41EBC329A0035A70F /* SearchAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchAPIClient.h; path = APIClient/SearchAPIClient.h; sourceTree = "<group>"; };
+		33386BC51EBC329A0035A70F /* SearchAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchAPIClient.m; path = APIClient/SearchAPIClient.m; sourceTree = "<group>"; };
+		33386BC81EBC3BDA0035A70F /* SearchResultExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultExtractor.h; sourceTree = "<group>"; };
+		33386BC91EBC3BDA0035A70F /* SearchResultExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultExtractor.m; sourceTree = "<group>"; };
 		4EADCE6D7FC120A6BB5683DE /* Pods-GETestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GETestAppTests/Pods-GETestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D40EBF493723B6C4174D478 /* Pods-GETestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GETestApp/Pods-GETestApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB1E35545C386CF27DB6C90B /* Pods-GETestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GETestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GETestAppTests/Pods-GETestAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +164,10 @@
 		33386B8F1EB955DD0035A70F /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				33386BC01EBC282C0035A70F /* MappingModel */,
+				33386BBF1EBC27FB0035A70F /* APIClientProtocol.h */,
+				33386BC41EBC329A0035A70F /* SearchAPIClient.h */,
+				33386BC51EBC329A0035A70F /* SearchAPIClient.m */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -175,6 +189,7 @@
 		33386B951EB95A3A0035A70F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				33386BC71EBC3AEA0035A70F /* SearchResultsExtractor */,
 				33386B961EB95A3A0035A70F /* SearchInteractor.h */,
 				33386B971EB95A3A0035A70F /* SearchInteractor.m */,
 			);
@@ -245,6 +260,24 @@
 				33386BB91EBACCB50035A70F /* SearchResult.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		33386BC01EBC282C0035A70F /* MappingModel */ = {
+			isa = PBXGroup;
+			children = (
+				33386BC11EBC2A6B0035A70F /* APIMappingModel.h */,
+				33386BC21EBC2A6B0035A70F /* APIMappingModel.m */,
+			);
+			name = MappingModel;
+			sourceTree = "<group>";
+		};
+		33386BC71EBC3AEA0035A70F /* SearchResultsExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				33386BC81EBC3BDA0035A70F /* SearchResultExtractor.h */,
+				33386BC91EBC3BDA0035A70F /* SearchResultExtractor.m */,
+			);
+			name = SearchResultsExtractor;
 			sourceTree = "<group>";
 		};
 		9B298E1E77EEDD06E0451515 /* Pods */ = {
@@ -470,10 +503,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33386BBA1EBACCB50035A70F /* SearchResult.m in Sources */,
+				33386BC31EBC2A6B0035A70F /* APIMappingModel.m in Sources */,
 				33386BA51EB95A3A0035A70F /* SearchPresenter.m in Sources */,
 				33386B6E1EB955800035A70F /* AppDelegate.m in Sources */,
+				33386BC61EBC329A0035A70F /* SearchAPIClient.m in Sources */,
 				33386BA41EB95A3A0035A70F /* SearchInteractor.m in Sources */,
 				33386BA81EB95A3A0035A70F /* SearchWireframe.m in Sources */,
+				33386BCA1EBC3BDA0035A70F /* SearchResultExtractor.m in Sources */,
 				33386BA61EB95A3A0035A70F /* SearchViewController.m in Sources */,
 				33386B6B1EB955800035A70F /* main.m in Sources */,
 				33386BB11EBAB2080035A70F /* SearchResultTableViewCell.m in Sources */,
