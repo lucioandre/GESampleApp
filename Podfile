@@ -6,6 +6,7 @@ target 'GETestApp' do
   # use_frameworks!
 
   # Pods for GETestApp
+    pod 'AFNetworking', '~> 2.5.4'
 	pod 'Mantle', '~> 2.0'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'SDWebImage', '~>3.8'

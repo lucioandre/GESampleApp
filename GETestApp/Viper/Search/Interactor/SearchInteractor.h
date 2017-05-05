@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "SearchProtocols.h"
+#import "APIClientProtocol.h"
 
 @interface SearchInteractor : NSObject<SearchInteractorProtocol>
+
+- (instancetype)initWithSearchResultsProvider:(id<SearchResultsProviderProtocol>)searchResultsProvider;
 
 @end

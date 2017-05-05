@@ -16,6 +16,7 @@
 @property (nonatomic, copy, readonly) NSString *departureTime;
 @property (nonatomic, copy, readonly) NSString *arrivalTime;
 @property (nonatomic, assign, readonly) NSInteger numberOfStops;
+@property (nonatomic, copy, readonly) NSDate *departureDate;
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
                vendorIconUrlString:(NSString *)vendorIconUrlString

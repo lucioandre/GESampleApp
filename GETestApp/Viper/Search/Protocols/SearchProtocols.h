@@ -34,5 +34,7 @@ typedef NS_ENUM(NSInteger, SelectedOption){
 @end
 
 @protocol SearchInteractorProtocol <NSObject>
-
+- (void)searchTrainResultsOnCompletion:(void(^)(NSArray <SearchResult*> *results, NSError *error))completion;
+- (void)searchBusesResultsOnCompletion:(void(^)(NSArray <SearchResult*> *results, NSError *error))completion;
+- (void)searchFlightsResultsOnCompletion:(void(^)(NSArray <SearchResult*> *results, NSError *error))completion;
 @end
