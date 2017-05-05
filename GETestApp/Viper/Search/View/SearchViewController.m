@@ -63,10 +63,6 @@
 - (void)showProgressIndicator {
     [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
-    hud.label.text = @"Loading...";
-    [hud showAnimated:YES];
-    
 }
 
 - (void)hideProgressIndicator {
