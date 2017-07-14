@@ -8,9 +8,8 @@ This simple app was built to demonstrate the usage of Viper Archictecture. Using
 * Entities - It is the model object handled by Interactor. For a serie of advantages (or problems), one of the main Viper principes is to avoid manipulating non PONSO (Plain Old NSObjects) models, like ManagedObjects or Mantle, thats why Entities are important.
 * Protocols - Viper follows many good principes like S.O.L.I.D, and of them is Dependency Inversion. It means that sub-modules should not depend on concretions, but on Abstractions. It brings a series of advantages like refactoring, business rules change, unit testing, etc. In this case, I grouped all the protocols for the module in a single file. 
 
-This project was written using Objective-C, and utilize Cocoapods as dependency manager. The third-party libs used are:
+This project was written using Objective-C, and utilize Cocoapods as dependency manager. Layout is built using XIB files instead Storyboards to make reuse easier. The third-party libs used are:
 * AFNetworking - for networking request
 * Mantle - for JSON parse and object mapping
 * MBProgressHUB - A common used progress indicator in iOS.
 * SDWebImage - Used to load images async and manage presentation in reusable cells.
-Layout is built using XIB files instead Storyboards to make reuse easier.
